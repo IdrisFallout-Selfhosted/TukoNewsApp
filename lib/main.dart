@@ -9,6 +9,7 @@ import 'screens/entertainment_screen.dart';
 import 'screens/people_screen.dart';
 import 'screens/business_screen.dart';
 import 'screens/sports_screen.dart';
+import 'screens/lifehack_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -44,7 +45,8 @@ class _MainScreenState extends State<MainScreen> {
     'People',
     'Business',
     'Sports',
-    'Editorial'
+    'Editorial',
+    'Facts and Lifehacks'
   ];
 
   List<Widget> screens = [
@@ -58,6 +60,7 @@ class _MainScreenState extends State<MainScreen> {
     BusinessScreen(),
     SportsScreen(),
     EditorialScreen(),
+    LifehacksScreen(),
   ];
 
   @override
