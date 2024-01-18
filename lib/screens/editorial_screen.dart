@@ -12,6 +12,8 @@ class _EditorialScreenState extends State<EditorialScreen> {
   final String opinionApiUrl = 'https://tuko.waithakasam.tech/editorial/opinion/';
   final String factCheckApiUrl = 'https://tuko.waithakasam.tech/editorial/fact-check/';
   final String featureApiUrl = 'https://tuko.waithakasam.tech/editorial/feature/';
+  final String analysisApiUrl = 'https://tuko.waithakasam.tech/editorial/analysis/';
+  final String explainerApiUrl = 'https://tuko.waithakasam.tech/editorial/explainer/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];
@@ -94,6 +96,10 @@ class _EditorialScreenState extends State<EditorialScreen> {
         return factCheckApiUrl;
       case 3:
         return featureApiUrl;
+      case 4:
+        return analysisApiUrl;
+      case 5:
+        return explainerApiUrl;
       default:
         return editorialApiUrl;
     }
@@ -208,6 +214,16 @@ class _EditorialScreenState extends State<EditorialScreen> {
             icon: Icon(Icons.featured_play_list),
             label: 'Feature',
             backgroundColor: _currentIndex == 3 ? Color(0xFF000000) : null,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.analytics),
+            label: 'Analysis',
+            backgroundColor: _currentIndex == 4 ? Color(0xFF000000) : null,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.explicit),
+            label: 'Explainer',
+            backgroundColor: _currentIndex == 5 ? Color(0xFF000000) : null,
           ),
         ],
         unselectedItemColor: Colors.grey,
