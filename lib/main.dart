@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/editorial_screen.dart';
 import 'screens/home_screen.dart';
 import 'screens/climate_screen.dart';
 import 'screens/politics_screen.dart';
@@ -43,6 +44,7 @@ class _MainScreenState extends State<MainScreen> {
     'People',
     'Business',
     'Sports',
+    'Editorial'
   ];
 
   List<Widget> screens = [
@@ -55,6 +57,7 @@ class _MainScreenState extends State<MainScreen> {
     PeopleScreen(),
     BusinessScreen(),
     SportsScreen(),
+    EditorialScreen(),
   ];
 
   @override

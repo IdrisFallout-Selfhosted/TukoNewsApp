@@ -2,16 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:tukonewsapp/models/article.dart';
 import 'package:tukonewsapp/services/api_service.dart';
 
-class SportsScreen extends StatefulWidget {
+class EditorialScreen extends StatefulWidget {
   @override
-  _SportsScreenState createState() => _SportsScreenState();
+  _EditorialScreenState createState() => _EditorialScreenState();
 }
 
-class _SportsScreenState extends State<SportsScreen> {
-  final String sportsApiUrl = 'https://tuko.waithakasam.tech/sports/';
-  final String footballApiUrl = 'https://tuko.waithakasam.tech/sports/football/';
-  final String boxingApiUrl = 'https://tuko.waithakasam.tech/sports/boxing/';
-  final String athleticsApiUrl = 'https://tuko.waithakasam.tech/sports/athletics/';
+class _EditorialScreenState extends State<EditorialScreen> {
+  final String editorialApiUrl = 'https://tuko.waithakasam.tech/editorial/';
+  final String opinionApiUrl = 'https://tuko.waithakasam.tech/editorial/opinion/';
+  final String factCheckApiUrl = 'https://tuko.waithakasam.tech/editorial/fact-check/';
+  final String featureApiUrl = 'https://tuko.waithakasam.tech/editorial/feature/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];
@@ -19,7 +19,7 @@ class _SportsScreenState extends State<SportsScreen> {
   bool hasMorePages = true;
   ScrollController _scrollController = ScrollController();
   int _currentIndex = 0;
-  bool shouldLoadSportsData = true;
+  bool shouldLoadEditorialData = true;
 
   @override
   void initState() {
@@ -43,8 +43,8 @@ class _SportsScreenState extends State<SportsScreen> {
     try {
       final String currentApiUrl = getCurrentApiUrl();
 
-      // Check if it's the Sports subsection and should load data
-      if (_currentIndex == 0 && !shouldLoadSportsData) {
+      // Check if it's the Editorial subsection and should load data
+      if (_currentIndex == 0 && !shouldLoadEditorialData) {
         setState(() {
           hasMorePages = false;
         });
@@ -67,7 +67,7 @@ class _SportsScreenState extends State<SportsScreen> {
               .toList());
           currentPage++;
           if (_currentIndex == 0) {
-            shouldLoadSportsData = false;
+            shouldLoadEditorialData = false;
           }
         });
       } else {
@@ -87,15 +87,15 @@ class _SportsScreenState extends State<SportsScreen> {
   String getCurrentApiUrl() {
     switch (_currentIndex) {
       case 0:
-        return sportsApiUrl;
+        return editorialApiUrl;
       case 1:
-        return footballApiUrl;
+        return opinionApiUrl;
       case 2:
-        return boxingApiUrl;
+        return factCheckApiUrl;
       case 3:
-        return athleticsApiUrl;
+        return featureApiUrl;
       default:
-        return sportsApiUrl;
+        return editorialApiUrl;
     }
   }
 
@@ -184,29 +184,29 @@ class _SportsScreenState extends State<SportsScreen> {
             currentArticles.clear(); // Clear the current articles when switching tabs
             currentPage = 1; // Reset page to 1 when switching tabs
             hasMorePages = true; // Reset hasMorePages to true when switching tabs
-            shouldLoadSportsData = true; // Reset shouldLoadSportsData to true when switching tabs
+            shouldLoadEditorialData = true; // Reset shouldLoadEditorialData to true when switching tabs
           });
           fetchDataForCurrentTab();
         },
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports),
-            label: 'Sports',
+            icon: Icon(Icons.article),
+            label: 'Editorial',
             backgroundColor: _currentIndex == 0 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_soccer),
-            label: 'Football',
+            icon: Icon(Icons.rate_review),
+            label: 'Opinion',
             backgroundColor: _currentIndex == 1 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.sports_mma),
-            label: 'Boxing',
+            icon: Icon(Icons.fact_check),
+            label: 'Fact Check',
             backgroundColor: _currentIndex == 2 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.directions_run),
-            label: 'Athletics',
+            icon: Icon(Icons.featured_play_list),
+            label: 'Feature',
             backgroundColor: _currentIndex == 3 ? Color(0xFF000000) : null,
           ),
         ],
