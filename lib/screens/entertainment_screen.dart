@@ -195,27 +195,27 @@ class _EntertainmentScreenState extends State<EntertainmentScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.movie),
             label: 'Entertainment',
-            backgroundColor: _currentIndex == 0 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 0 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Celebrities',
-            backgroundColor: _currentIndex == 1 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 1 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.movie_filter),
             label: 'Movies',
-            backgroundColor: _currentIndex == 2 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 2 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.music_note),
             label: 'Music',
-            backgroundColor: _currentIndex == 3 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 3 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.live_tv),
             label: 'TV Shows',
-            backgroundColor: _currentIndex == 4 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 4 ? Color(0xFF000000) : null,
           ),
         ],
         unselectedItemColor: Colors.grey,

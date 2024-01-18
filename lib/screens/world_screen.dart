@@ -194,27 +194,27 @@ class _WorldScreenState extends State<WorldScreen> {
           BottomNavigationBarItem(
             icon: Icon(Icons.public),
             label: 'World',
-            backgroundColor: _currentIndex == 0 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 0 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Asia',
-            backgroundColor: _currentIndex == 1 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 1 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Africa',
-            backgroundColor: _currentIndex == 2 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 2 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'Europe',
-            backgroundColor: _currentIndex == 3 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 3 ? Color(0xFF000000) : null,
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.location_on),
             label: 'US',
-            backgroundColor: _currentIndex == 4 ? Color(0xFFC21516) : null,
+            backgroundColor: _currentIndex == 4 ? Color(0xFF000000) : null,
           ),
         ],
         unselectedItemColor: Colors.grey,
