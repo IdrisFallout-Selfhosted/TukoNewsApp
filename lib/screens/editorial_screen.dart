@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tukonewsapp/models/article.dart';
 import 'package:tukonewsapp/services/api_service.dart';
+import 'package:tukonewsapp/screens/news_content_screen.dart';
 
 class EditorialScreen extends StatefulWidget {
   @override
@@ -129,7 +130,17 @@ class _EditorialScreenState extends State<EditorialScreen> {
                 }
 
                 final article = currentArticles[index];
-                return Card(
+                return GestureDetector(
+                    onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          NewsContentScreen(url: article.link),
+                    ),
+                  );
+                },
+                child: Card(
                   elevation: 4,
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   shape: RoundedRectangleBorder(
@@ -176,7 +187,7 @@ class _EditorialScreenState extends State<EditorialScreen> {
                       ),
                     ],
                   ),
-                );
+                ));
               },
             ),
           ),

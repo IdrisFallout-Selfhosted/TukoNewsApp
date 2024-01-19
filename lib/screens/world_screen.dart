@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:tukonewsapp/models/article.dart';
 import 'package:tukonewsapp/services/api_service.dart';
+import 'package:tukonewsapp/screens/news_content_screen.dart';
 
 class WorldScreen extends StatefulWidget {
   @override
@@ -125,7 +126,17 @@ class _WorldScreenState extends State<WorldScreen> {
                 }
 
                 final article = currentArticles[index];
-                return Card(
+                return GestureDetector(
+                    onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) =>
+                          NewsContentScreen(url: article.link),
+                    ),
+                  );
+                },
+                child: Card(
                   elevation: 4,
                   margin: EdgeInsets.symmetric(vertical: 8, horizontal: 16),
                   shape: RoundedRectangleBorder(
@@ -172,7 +183,7 @@ class _WorldScreenState extends State<WorldScreen> {
                       ),
                     ],
                   ),
-                );
+                ));
               },
             ),
           ),

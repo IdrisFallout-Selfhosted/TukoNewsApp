@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:tukonewsapp/models/article.dart';
+import 'package:tukonewsapp/screens/news_content_screen.dart';
 import 'package:tukonewsapp/services/api_service.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -55,42 +56,52 @@ class _HomeScreenState extends State<HomeScreen> {
                 bottom: Radius.circular(15),
               ),
             ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                ClipRRect(
-                  borderRadius: BorderRadius.vertical(
-                    top: Radius.circular(15),
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => NewsContentScreen(url: article.link),
                   ),
-                  child: Image.network(
-                    article.thumbnail,
-                    height: 200,
-                    fit: BoxFit.cover,
+                );
+              },
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  ClipRRect(
+                    borderRadius: BorderRadius.vertical(
+                      top: Radius.circular(15),
+                    ),
+                    child: Image.network(
+                      article.thumbnail,
+                      height: 200,
+                      fit: BoxFit.cover,
+                    ),
                   ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text(
-                        article.headline,
-                        style: TextStyle(
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          article.headline,
+                          style: TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
                         ),
-                      ),
-                      SizedBox(height: 8),
-                      Text(
-                        article.timeAgo,
-                        style: TextStyle(
-                          color: Colors.grey,
+                        SizedBox(height: 8),
+                        Text(
+                          article.timeAgo,
+                          style: TextStyle(
+                            color: Colors.grey,
+                          ),
                         ),
-                      ),
-                    ],
+                      ],
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           );
         },
