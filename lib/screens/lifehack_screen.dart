@@ -9,15 +9,15 @@ class LifehacksScreen extends StatefulWidget {
 }
 
 class _LifehacksScreenState extends State<LifehacksScreen> {
-  final String factsApiUrl = 'https://tuko.waithakasam.tech/facts-lifehacks/';
-  final String celebrityBiographiesApiUrl = 'https://tuko.waithakasam.tech/celebrity-biographies/';
-  final String messagesApiUrl = 'https://tuko.waithakasam.tech/messages-quotes/';
-  final String guidesApiUrl = 'https://tuko.waithakasam.tech/guides/';
-  final String tvAndMoviesApiUrl = 'https://tuko.waithakasam.tech/tv-movies/';
-  final String studyApiUrl = 'https://tuko.waithakasam.tech/study/';
-  final String fashionAndStyleApiUrl = 'https://tuko.waithakasam.tech/fashion-style/';
-  final String musicAndSingersApiUrl = 'https://tuko.waithakasam.tech/music-singers/';
-  final String gamingApiUrl = 'https://tuko.waithakasam.tech/gaming/';
+  final String factsApiUrl = 'https://tuko.waithakasam.com/facts-lifehacks/';
+  final String celebrityBiographiesApiUrl = 'https://tuko.waithakasam.com/celebrity-biographies/';
+  final String messagesApiUrl = 'https://tuko.waithakasam.com/messages-quotes/';
+  final String guidesApiUrl = 'https://tuko.waithakasam.com/guides/';
+  final String tvAndMoviesApiUrl = 'https://tuko.waithakasam.com/tv-movies/';
+  final String studyApiUrl = 'https://tuko.waithakasam.com/study/';
+  final String fashionAndStyleApiUrl = 'https://tuko.waithakasam.com/fashion-style/';
+  final String musicAndSingersApiUrl = 'https://tuko.waithakasam.com/music-singers/';
+  final String gamingApiUrl = 'https://tuko.waithakasam.com/gaming/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

@@ -9,7 +9,7 @@ class KenyaScreen extends StatefulWidget {
 }
 
 class _KenyaScreenState extends State<KenyaScreen> {
-  final String apiUrlBase = 'https://tuko.waithakasam.tech/kenya/counties/';
+  final String apiUrlBase = 'https://tuko.waithakasam.com/kenya/counties/';
   int currentPage = 1;
   List<Article> articles = [];
   bool isLoading = false;

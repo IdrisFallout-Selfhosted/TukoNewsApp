@@ -9,10 +9,10 @@ class SportsScreen extends StatefulWidget {
 }
 
 class _SportsScreenState extends State<SportsScreen> {
-  final String sportsApiUrl = 'https://tuko.waithakasam.tech/sports/';
-  final String footballApiUrl = 'https://tuko.waithakasam.tech/sports/football/';
-  final String boxingApiUrl = 'https://tuko.waithakasam.tech/sports/boxing/';
-  final String athleticsApiUrl = 'https://tuko.waithakasam.tech/sports/athletics/';
+  final String sportsApiUrl = 'https://tuko.waithakasam.com/sports/';
+  final String footballApiUrl = 'https://tuko.waithakasam.com/sports/football/';
+  final String boxingApiUrl = 'https://tuko.waithakasam.com/sports/boxing/';
+  final String athleticsApiUrl = 'https://tuko.waithakasam.com/sports/athletics/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

@@ -9,11 +9,11 @@ class EntertainmentScreen extends StatefulWidget {
 }
 
 class _EntertainmentScreenState extends State<EntertainmentScreen> {
-  final String entertainmentApiUrl = 'https://tuko.waithakasam.tech/entertainment/';
-  final String celebritiesApiUrl = 'https://tuko.waithakasam.tech/entertainment/celebrities/';
-  final String moviesApiUrl = 'https://tuko.waithakasam.tech/entertainment/movies/';
-  final String musicApiUrl = 'https://tuko.waithakasam.tech/entertainment/music/';
-  final String tvShowsApiUrl = 'https://tuko.waithakasam.tech/entertainment/tv-shows/';
+  final String entertainmentApiUrl = 'https://tuko.waithakasam.com/entertainment/';
+  final String celebritiesApiUrl = 'https://tuko.waithakasam.com/entertainment/celebrities/';
+  final String moviesApiUrl = 'https://tuko.waithakasam.com/entertainment/movies/';
+  final String musicApiUrl = 'https://tuko.waithakasam.com/entertainment/music/';
+  final String tvShowsApiUrl = 'https://tuko.waithakasam.com/entertainment/tv-shows/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

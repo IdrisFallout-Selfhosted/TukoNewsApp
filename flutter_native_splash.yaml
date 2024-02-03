@@ -1,0 +1,8 @@
+flutter_native_splash:
+  color: "#C21516"
+  image: assets/splash.png
+  android: true
+  ios: true
+  ios14: true
+  fit: BoxFit.cover
+  fill: true

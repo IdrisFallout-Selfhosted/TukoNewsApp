@@ -9,11 +9,11 @@ class WorldScreen extends StatefulWidget {
 }
 
 class _WorldScreenState extends State<WorldScreen> {
-  final String worldApiUrl = 'https://tuko.waithakasam.tech/world/';
-  final String asiaApiUrl = 'https://tuko.waithakasam.tech/world/asia/';
-  final String africaApiUrl = 'https://tuko.waithakasam.tech/world/africa/';
-  final String europeApiUrl = 'https://tuko.waithakasam.tech/world/europe/';
-  final String usApiUrl = 'https://tuko.waithakasam.tech/world/us/';
+  final String worldApiUrl = 'https://tuko.waithakasam.com/world/';
+  final String asiaApiUrl = 'https://tuko.waithakasam.com/world/asia/';
+  final String africaApiUrl = 'https://tuko.waithakasam.com/world/africa/';
+  final String europeApiUrl = 'https://tuko.waithakasam.com/world/europe/';
+  final String usApiUrl = 'https://tuko.waithakasam.com/world/us/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

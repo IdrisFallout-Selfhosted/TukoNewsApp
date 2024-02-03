@@ -9,12 +9,12 @@ class EditorialScreen extends StatefulWidget {
 }
 
 class _EditorialScreenState extends State<EditorialScreen> {
-  final String editorialApiUrl = 'https://tuko.waithakasam.tech/editorial/';
-  final String opinionApiUrl = 'https://tuko.waithakasam.tech/editorial/opinion/';
-  final String factCheckApiUrl = 'https://tuko.waithakasam.tech/editorial/fact-check/';
-  final String featureApiUrl = 'https://tuko.waithakasam.tech/editorial/feature/';
-  final String analysisApiUrl = 'https://tuko.waithakasam.tech/editorial/analysis/';
-  final String explainerApiUrl = 'https://tuko.waithakasam.tech/editorial/explainer/';
+  final String editorialApiUrl = 'https://tuko.waithakasam.com/editorial/';
+  final String opinionApiUrl = 'https://tuko.waithakasam.com/editorial/opinion/';
+  final String factCheckApiUrl = 'https://tuko.waithakasam.com/editorial/fact-check/';
+  final String featureApiUrl = 'https://tuko.waithakasam.com/editorial/feature/';
+  final String analysisApiUrl = 'https://tuko.waithakasam.com/editorial/analysis/';
+  final String explainerApiUrl = 'https://tuko.waithakasam.com/editorial/explainer/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

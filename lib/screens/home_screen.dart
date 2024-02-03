@@ -9,7 +9,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
-  final String apiUrl = 'https://tuko.waithakasam.tech';
+  final String apiUrl = 'https://tuko.waithakasam.com';
 
   List<Article> articles = [];
 

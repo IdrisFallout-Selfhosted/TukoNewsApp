@@ -9,12 +9,12 @@ class BusinessScreen extends StatefulWidget {
 }
 
 class _BusinessScreenState extends State<BusinessScreen> {
-  final String businessApiUrl = 'https://tuko.waithakasam.tech/business/';
-  final String energyApiUrl = 'https://tuko.waithakasam.tech/business/energy/';
-  final String capitalMarketApiUrl = 'https://tuko.waithakasam.tech/business/capital-market/';
-  final String moneyApiUrl = 'https://tuko.waithakasam.tech/business/money/';
-  final String industryApiUrl = 'https://tuko.waithakasam.tech/business/industry/';
-  final String technologyApiUrl = 'https://tuko.waithakasam.tech/business/technology/';
+  final String businessApiUrl = 'https://tuko.waithakasam.com/business/';
+  final String energyApiUrl = 'https://tuko.waithakasam.com/business/energy/';
+  final String capitalMarketApiUrl = 'https://tuko.waithakasam.com/business/capital-market/';
+  final String moneyApiUrl = 'https://tuko.waithakasam.com/business/money/';
+  final String industryApiUrl = 'https://tuko.waithakasam.com/business/industry/';
+  final String technologyApiUrl = 'https://tuko.waithakasam.com/business/technology/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

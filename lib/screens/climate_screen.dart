@@ -10,7 +10,7 @@ class ClimateScreen extends StatefulWidget {
 
 class _ClimateScreenState extends State<ClimateScreen> {
   final String apiUrlBase =
-      'https://tuko.waithakasam.tech/tags/climate-change/';
+      'https://tuko.waithakasam.com/tags/climate-change/';
   int currentPage = 1;
   List<Article> articles = [];
   bool isLoading = false;

@@ -9,9 +9,9 @@ class PeopleScreen extends StatefulWidget {
 }
 
 class _PeopleScreenState extends State<PeopleScreen> {
-  final String peopleApiUrl = 'https://tuko.waithakasam.tech/people/';
-  final String familyApiUrl = 'https://tuko.waithakasam.tech/people/family/';
-  final String relationshipsApiUrl = 'https://tuko.waithakasam.tech/people/relationships/';
+  final String peopleApiUrl = 'https://tuko.waithakasam.com/people/';
+  final String familyApiUrl = 'https://tuko.waithakasam.com/people/family/';
+  final String relationshipsApiUrl = 'https://tuko.waithakasam.com/people/relationships/';
 
   int currentPage = 1;
   List<Article> currentArticles = [];

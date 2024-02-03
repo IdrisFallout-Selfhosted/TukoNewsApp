@@ -9,7 +9,7 @@ class PoliticsScreen extends StatefulWidget {
 }
 
 class _PoliticsScreenState extends State<PoliticsScreen> {
-  final String apiUrlBase = 'https://tuko.waithakasam.tech/politics/';
+  final String apiUrlBase = 'https://tuko.waithakasam.com/politics/';
   int currentPage = 1;
   List<Article> articles = [];
   bool isLoading = false;
