@@ -17,7 +17,7 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2
         with:
-          flutter-version: '3.0.0'  # Specify the Flutter version you are using
+          flutter-version: '3.0.0'  # Specify the Flutter version here
 
       - name: Install dependencies
         run: flutter pub get
@@ -28,4 +28,6 @@ jobs:
       - name: Flutter Deployment
         uses: jeanluc243/Flutter-Deployment@0.1
         with:
-          # Add any required inputs for the action here
+          # If the action requires inputs, provide them here. 
+          # For example:
+          # api_key: ${{ secrets.YOUR_SECRET }}
